@@ -5,5 +5,6 @@
     4： git remote add origin git@github.com:Running-Snail-One/myInstructions.git  添加远程仓库地址
     5：git push -u origin master(master是指远程仓库的名称)
 
+
 git获取远程服务器的指定分支：
         $ git pull <远程库名> <远程分支名>:<本地分支名>
