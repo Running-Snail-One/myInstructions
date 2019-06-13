@@ -13,10 +13,26 @@ mysql安装成功后设置密码：mysql -u root password "root"
 登录MySQL：mysql -u root -p
            Enter password:*******
 
+显示表的结构：
+    desc table_name;
+查看表生成的DDL:
+    show create table table_name;
+复制表结构：
+    create table table1 like table;
+复制数据：
+    insert into table1 select * from table
+修改表结构
+    alter table competitor_goods add sku_id bigint(20) unsigned DEFAULT NULL COMMENT '商品销售码';
+修改字段名称和属性：
+    -- 将test字段改为test1
+    -- ALTER TABLE 表名 CHANGE 原字段名 新字段名 字段类型 约束条件
+    ALTER TABLE user10 CHANGE test test1 CHAR(32) NOT NULL DEFAULT '123';
 mysqld --initialize初始化的时候报错误：
 	1：可能由于MySQL目录中存在data文件导致
 	执行systemctl start mysql 启动mysql
 	在执行systemctl status mysqld 查看状态 看看是否已经创建好了data目录。如果自动创建好了，没有必要在初始化。
+
+
 
 
 
