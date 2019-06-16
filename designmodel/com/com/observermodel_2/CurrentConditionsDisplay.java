@@ -1,4 +1,4 @@
-package com.observermodel_2;
+package com.com.observermodel_2;
 
 import java.util.Observable;
 import java.util.Observer;

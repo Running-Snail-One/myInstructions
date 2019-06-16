@@ -1,4 +1,4 @@
-package com.observermodel;
+package com.com.observermodel;
 
 public interface Subject {
 
