@@ -1,0 +1,54 @@
+REDIS 五种结构类型
+1：String
+2；List
+3:Set
+4:Hash
+5:ZSet
+
+String 类型集合常见指令：GET/SET/DEL
+        SET: 语法结构：set key value
+             返回值：OK
+        GET: 语法结构: get key
+             返回值：value
+        DEL: 语法结构:del key
+             返回值:1/nio(删除成功的个数/键的值不存在)
+
+List   类型集合常见指令 RPUSH/LRANGE/LINDEX/LPOP
+
+       RPUSH:语法结构:rpush list-key item
+              返回值：1
+       LRANGE:语法结构：lrange list-key 0 -1 (-1代表所有的list元素)
+              返回值：list中所有的值集合
+       LINDEX 语法结构：Lindex list-key 1  (1指的是下标索引)
+       LPOP   语法结构：lpop list-key
+
+Set    类型集合常见指令 SADD/SMEMBERS/SISMEMBERS/SREM
+
+              SADD:语法结构:sadd set-key item
+                     返回值：1
+              SMEMBERS:语法结构：smember set-key 0 -1
+                     返回值：set中所有的值集合
+              SISMEMBERS 语法结构：sismembers set-key value
+              SREM   语法结构：srem set-key value
+
+Hash    类型集合常见指令 HGET/HSET/HGETALL/HDEL
+
+                     HGET:语法结构:hget hash-key sub-key
+                            返回值：value
+                     HSET:语法结构：hset hash-key sub-key value
+                            返回值：1
+                     HGETALL 语法结构：hgetall hash-key
+                             返回值：对应的key 和 value
+                     HDEL   语法结构：hdel hash-key sub-key
+                            返回值：1
+
+Zset    类型集合常见指令 ZADD/ZRANGE/ZRANGEBYSCORE/ZREM
+
+                     ZADD:语法结构:zadd zset-key score item
+                            返回值：1
+                     ZRANGE:语法结构：zadd zset-key 0 -1 withscores
+                            返回值：key 和 score
+                     ZRANGEBYSCORE 语法结构：zrangebyscore zset-key  0 800 withscores
+                             返回值：对应的key 和 score
+                     ZREM   语法结构：zrem zset-key member
+                            返回值：1
